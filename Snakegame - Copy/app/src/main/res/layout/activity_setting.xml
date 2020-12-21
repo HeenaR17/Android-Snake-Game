@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.pixelsface.snake.SettingActivity">
+    <!--    -->
+
+    <RadioButton
+        android:id="@+id/povRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/point_of_view"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/controlButton"
+        app:layout_constraintEnd_toStartOf="@+id/dualRadio"
+        app:layout_constraintStart_toEndOf="@+id/controlButton"
+        app:layout_constraintTop_toTopOf="@+id/controlButton" />
+
+    <RadioButton
+        android:id="@+id/dualRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dual"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/povRadio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/povRadio"
+        app:layout_constraintTop_toTopOf="@+id/povRadio" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/new_game_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FF5722"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
+
+        <Button
+            android:id="@+id/new_game_button"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/new_game"
+            android:textColor="#ffffff" />
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/controlButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/control"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/soundButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_game_layout" />
+
+    <Button
+        android:id="@+id/soundButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@android:color/transparent"
+        android:text="@string/sound"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/soundOnRadio"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/controlButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioButton
+        android:id="@+id/soundOnRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/on"
+        android:enabled="true"
+        app:layout_constraintBottom_toBottomOf="@+id/soundButton"
+        app:layout_constraintEnd_toStartOf="@+id/soundOffRadio"
+        app:layout_constraintStart_toEndOf="@+id/soundButton"
+        app:layout_constraintTop_toTopOf="@+id/soundButton" />
+
+    <RadioButton
+        android:id="@+id/soundOffRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/off"
+        app:layout_constraintBottom_toBottomOf="@+id/soundOnRadio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/soundOnRadio"
+        app:layout_constraintTop_toTopOf="@+id/soundOnRadio" />
+
+
+</android.support.constraint.ConstraintLayout>
